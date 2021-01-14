@@ -1,0 +1,8 @@
+PRGNAM="libtpms"
+VERSION="0.7.4"
+HOMEPAGE="https://github.com/stefanberger/libtpms"
+DOWNLOAD="https://github.com/stefanberger/libtpms/archive/v0.7.4/libtpms-0.7.4.tar.gz"
+SHA256SUM="42643a03abd34b71ad3301dece8c1b2a6d519e590864f197be08c8e9146c2a0f"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
