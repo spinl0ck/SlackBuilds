@@ -1,0 +1,8 @@
+PRGNAM="light"
+VERSION="1.2.2"
+HOMEPAGE="https://github.com/haikarainen/light"
+DOWNLOAD="https://github.com/haikarainen/light/archive/v1.2.2/light-1.2.2.tar.gz"
+SHA256SUM="62e889ee9be80fe808a972ef4981acc39e83a20f9a84a66a82cd1f623c868d9c"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

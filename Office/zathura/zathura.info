@@ -1,0 +1,8 @@
+PRGNAM="zathura"
+VERSION="0.4.7"
+HOMEPAGE="https://github.com/pwmt/zathura"
+DOWNLOAD="https://github.com/pwmt/zathura/archive/0.4.7/zathura-0.4.7.tar.gz""
+SHA256SUM="dbea0d5c42bfb813640af2587edbf04a93e6e87232f429e09845e5a9d0049ffb"
+REQUIRES="girara"
+MAINTAINER="Dmitry {spinl0ck) Iskhakov}"
+EMAIL="spinl0ck[at]protonmail.com"

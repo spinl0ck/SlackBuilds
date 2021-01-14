@@ -1,0 +1,12 @@
+Intel Media Driver for VAAPI
+
+Supported platforms:
+    BDW (Broadwell)
+    SKL (Skylake)
+    BXT (Broxton) / APL (Apollo Lake)
+    KBLx (KBL/Kaby Lake; CFL/Coffe Lake; WHL/Wh)iskey Lake;
+          CML/Comet Lake; AML/Amber Lake)
+    ICL (Ice Lake)
+    JSL (Jasper Lake) / EHL (Elkhart Lake)
+    TGL (Tiger Lake)
+    DG1/SG1

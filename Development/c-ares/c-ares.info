@@ -1,0 +1,8 @@
+PRGNAM="c-ares"
+VERSION="1.17.1"
+HOMEPAGE="https://c-ares.haxx.se/"
+DOWNLOAD="https://c-ares.haxx.se/download/c-ares-1.17.1.tar.gz"
+SHA256SUM="d73dd0f6de824afd407ce10750ea081af47eba52b8a6cb307d220131ad93fc40"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

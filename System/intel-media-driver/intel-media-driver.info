@@ -1,0 +1,8 @@
+PRGNAM="intel-media-driver"
+VERSION="20.4.5"
+HOMEPAGE="https://github.com/intel/media-driver"
+DOWNLOAD="https://github.com/intel/media-driver/archive/intel-media-20.4.5.tar.gz"
+SHA256SUM="3d856a963127ddd6690fc6dac521d7674947675d5f20452f1e6f45c0fc83f9e6"
+REQUIRES="libva-2.10.0, intel-gmmlib-20.4.1"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

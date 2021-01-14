@@ -1,0 +1,8 @@
+PRGNAM="zathura-pdf-mupdf"
+VERSION="0.3.6"
+HOMEPAGE="https://github.com/pwmt/zathura-pdf-mupdf"
+DOWNLOAD="https://github.com/pwmt/zathura-pdf-mupdf/archive/0.3.6/zathura-pdf-mupdf-0.3.6.tar.gz"
+SHA256SUM="94ab90b367c04e3a9dda52e3587e257e4c825b375bde13032f81b1f84becb4f1"
+REQUIRES="zathura, mupdf"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

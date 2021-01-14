@@ -1,0 +1,8 @@
+PRGNAM="nDPI"
+VERSION="3.4"
+HOMEPAGE="https://github.com/ntop/nDPI"
+DOWNLOAD="https://github.com/ntop/nDPI/archive/3.4/nDPI-3.4.tar.gz"
+SHA256SUM="dc9b291c7fde94edb45fb0f222e0d93c93f8d6d37f4efba20ebd9c655bfcedf9"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

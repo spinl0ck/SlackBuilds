@@ -1,0 +1,8 @@
+PRGNAM="zathura-djvu"
+VERSION="0.2.9"
+HOMEPAGE="https://github.com/pwmt/zathura-djvu"
+DOWNLOAD="https://github.com/pwmt/zathura-djvu/archive/0.2.9/zathura-djvu-0.2.9.tar.gz"
+SHA256SUM="84fae6da42e7cdc2e49ed4cd4f0315ac09716e95358b9c7487803a2cff47dbca"
+REQUIRES="zathura"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

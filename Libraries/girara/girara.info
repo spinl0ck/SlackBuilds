@@ -1,0 +1,8 @@
+PRGNAM="girara"
+VERSION="0.3.5"
+HOMEPAGE="https://github.com/pwmt/girara"
+DOWNLOAD="https://github.com/pwmt/girara/archive/0.3.5/girara-0.3.5.tar.gz"
+SHA256SUM="ce6bc8cb95ec886dc01c6ce8ea8ccf1d17db523d78dec1aa380115b2804971d8"
+REQUIRES="meson"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
