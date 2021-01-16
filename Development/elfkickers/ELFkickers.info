@@ -1,0 +1,8 @@
+PRGNAM="ELFkickers"
+VERSION="3.1a"
+HOMEPAGE="https://www.muppetlabs.com/~breadbox/software/elfkickers.html"
+DOWNLOAD="https://www.muppetlabs.com/~breadbox/software/pub/ELFkickers-3.1a.tar.gz"
+SHA256SUM="06430880aaf4919c5f99fc629da7000347421668c2cf32bced2d401aac276508"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

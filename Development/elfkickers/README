@@ -1,0 +1,34 @@
+ELFkickers is a collection of programs to manipulate ELF files.
+
+The table of contents:
+
+sstrip/
+  sstrip is a small utility that removes as much as possible from an
+  ELF file without affecting the file's memory image.
+
+objres/
+  objres is a simple utility that embeds arbitrary binary data files
+  in object files as exported variables.
+
+elfls/
+  elfls is a utility that displays an ELF file's program and/or
+  section header tables, which serve as a kind of global roadmap to
+  the file's contents.
+
+rebind/
+  rebind is another small utility that alters the binding of selected
+  exported symbols in an ELF object file.
+
+elftoc/
+  elftoc takes an ELF file and generates C code that defines a
+  structure with the same memory image, using the structures and
+  preprocessor symbols defined in your system's elf.h header file.
+
+ebfc/
+  ebfc is a compiler for a tiny programming language. The compiler can
+  generate 32-bit ELF executables, object files, and shared libraries.
+
+infect/
+  infect provides a very simple example of modifying an ELF executable
+  without affecting its original program.
+

@@ -1,0 +1,103 @@
+diff -Naur ELFkickers-3.1a-orig/ebfc/Makefile ELFkickers-3.1a/ebfc/Makefile
+--- ELFkickers-3.1a-orig/ebfc/Makefile	2020-12-01 21:11:32.275548562 +0300
++++ ELFkickers-3.1a/ebfc/Makefile	2020-12-01 21:12:34.802167466 +0300
+@@ -1,7 +1,7 @@
+ #  Makefile for ebfc
+ 
+-CC = gcc
+-CFLAGS = -Wall -Wextra -Wno-missing-field-initializers
++CC ?= gcc
++CFLAGS += -Wall -Wextra -Wno-missing-field-initializers
+ 
+ ebfc: ebfc.o brainfuck.o libelfparts.a
+ 
+diff -Naur ELFkickers-3.1a-orig/elfls/Makefile ELFkickers-3.1a/elfls/Makefile
+--- ELFkickers-3.1a-orig/elfls/Makefile	2020-12-01 21:11:32.277548582 +0300
++++ ELFkickers-3.1a/elfls/Makefile	2020-12-01 21:13:20.612620901 +0300
+@@ -1,7 +1,7 @@
+ #  Makefile for elfls
+ 
+-CC = gcc
+-CFLAGS = -Wall -Wextra -I../elfrw
++CC ?= gcc
++CFLAGS += -I../elfrw
+ 
+ elfls: elfls.c ../elfrw/libelfrw.a
+ 
+diff -Naur ELFkickers-3.1a-orig/elfrw/Makefile ELFkickers-3.1a/elfrw/Makefile
+--- ELFkickers-3.1a-orig/elfrw/Makefile	2020-12-01 21:11:32.277548582 +0300
++++ ELFkickers-3.1a/elfrw/Makefile	2020-12-01 21:13:59.788008663 +0300
+@@ -1,7 +1,6 @@
+ #  Makefile for libelfrw.a
+ 
+-CC = gcc
+-CFLAGS = -Wall -Wextra -O3
++CC ?= gcc
+ 
+ LIBOBJS = elfrw.o elfrw_dyn.o elfrw_ehdr.o elfrw_phdr.o elfrw_rel.o \
+           elfrw_shdr.o elfrw_sym.o elfrw_ver.o
+diff -Naur ELFkickers-3.1a-orig/elftoc/Makefile ELFkickers-3.1a/elftoc/Makefile
+--- ELFkickers-3.1a-orig/elftoc/Makefile	2020-12-01 21:11:32.278548591 +0300
++++ ELFkickers-3.1a/elftoc/Makefile	2020-12-01 21:14:29.828303581 +0300
+@@ -1,8 +1,6 @@
+ #  Makefile for elftoc
+ 
+-CC = gcc
+-CFLAGS = -Wall -Wextra
+-LDFLAGS = -Wall -Wextra
++CC ?= gcc
+ 
+ OBJS = gen.o names.o address.o readelf.o shdrtab.o phdrtab.o dynamic.o \
+        pieces.o outbase.o outitems.o outelf64.o outelf32.o out.o elftoc.o
+diff -Naur ELFkickers-3.1a-orig/infect/Makefile ELFkickers-3.1a/infect/Makefile
+--- ELFkickers-3.1a-orig/infect/Makefile	2020-12-01 21:11:32.280548611 +0300
++++ ELFkickers-3.1a/infect/Makefile	2020-12-01 21:14:56.770564267 +0300
+@@ -1,7 +1,6 @@
+ #  Makefile for infect
+ 
+-CC = gcc
+-CFLAGS = -Wall -Wextra
++CC ?= gcc
+ 
+ infect: infect.c
+ 
+diff -Naur ELFkickers-3.1a-orig/objres/Makefile ELFkickers-3.1a/objres/Makefile
+--- ELFkickers-3.1a-orig/objres/Makefile	2020-12-01 21:11:32.280548611 +0300
++++ ELFkickers-3.1a/objres/Makefile	2020-12-01 21:15:32.345908486 +0300
+@@ -1,8 +1,7 @@
+ #  Makefile for objres
+ 
+-CC = gcc
+-CFLAGS = -Wall -Wextra -I../elfrw
+-LDFLAGS = -Wall -Wextra
++CC ?= gcc
++CFLAGS += -I../elfrw
+ 
+ objres: objres.o ../elfrw/libelfrw.a
+ 
+diff -Naur ELFkickers-3.1a-orig/rebind/Makefile ELFkickers-3.1a/rebind/Makefile
+--- ELFkickers-3.1a-orig/rebind/Makefile	2020-12-01 21:11:32.281548621 +0300
++++ ELFkickers-3.1a/rebind/Makefile	2020-12-01 21:16:02.975204846 +0300
+@@ -1,7 +1,7 @@
+ #  Makefile for rebind
+ 
+-CC = gcc
+-CFLAGS = -Wall -Wextra -I../elfrw
++CC ?= gcc
++CFLAGS += -I../elfrw
+ 
+ rebind: rebind.c ../elfrw/libelfrw.a
+ 
+diff -Naur ELFkickers-3.1a-orig/sstrip/Makefile ELFkickers-3.1a/sstrip/Makefile
+--- ELFkickers-3.1a-orig/sstrip/Makefile	2020-12-01 21:11:32.281548621 +0300
++++ ELFkickers-3.1a/sstrip/Makefile	2020-12-01 21:16:33.155496867 +0300
+@@ -1,7 +1,7 @@
+ #  Makefile for sstrip
+ 
+-CC = gcc
+-CFLAGS = -Wall -Wextra -I../elfrw
++CC ?= gcc
++CFLAGS += -I../elfrw
+ 
+ sstrip: sstrip.c ../elfrw/libelfrw.a
+ 
