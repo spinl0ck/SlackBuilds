@@ -1,0 +1,8 @@
+PRGNAM="sparse"
+VERSION="0.6.3"
+HOMEPAGE="https://sparse.docs.kernel.org/en/latest/"
+DOWNLOAD="https://mirrors.edge.kernel.org/pub/software/devel/sparse/dist/sparse-0.6.3.tar.xz
+SHA256SUM="d4f6dbad8409e8e20a19f164b2c16f1edf76438ff77cf291935fde081b61a899"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
