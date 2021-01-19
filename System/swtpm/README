@@ -20,4 +20,4 @@ A group are recomended to run swtpm. The following should not
 conflict with anything else on SlackBuilds:
 
 groupadd -g 350 tss
-useradd -r -u 350 -g tss -s /sbin/nologin -c "TPM Emulator" tss
+useradd -u 350 -g 350 -d /dev/null -s /sbin/nologin -c "TPM Emulator" tss
