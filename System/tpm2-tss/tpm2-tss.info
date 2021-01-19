@@ -1,0 +1,8 @@
+PRGNAM="tpm2-tss"
+VERSION="3.0.3"
+HOMEPAGE="https://github.com/tpm2-software/tpm2-tss"
+DOWNLOAD="https://github.com/tpm2-software/tpm2-tss/releases/download/3.0.3/tpm2-tss-3.0.3.tar.gz"
+SHA256SUM="78392be7309baf47f51b122f566ac915fd4d1760ea78571cba2e1484f9b5be17"
+REQUIRES="json-c cmocka swtpm uthash"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
