@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# tpm2-abrmd - TPM2 access and resource daemon
+#
+# Startup/shutdown script for tpm2-abrmd
+#
+prog="tpm2-abrmd"
+prog_args='--tcti="device:/dev/tpm0" --logger=syslog'
+
+tpm2_abrmd_start() {
+    su tss -s /bin/sh -c "nohup /usr/sbin/$prog $prog_args >/dev/null 2>&1 &"
+    echo
+}
+
+tpm2_abrmd_stop() {
+    /usr/bin/killall $prog
+}
+
+tpm2_abrmd_reload() {
+    tpm2_abrmd_stop
+    sleep 5
+    tpm2_abrmd_start
+}
+
+case "$1" in
+    start)
+        tpm2_abrmd_start
+    ;;
+
+    stop)
+        tpm2_abrmd_stop
+    ;;
+
+    reload)
+        tpm2_abrmd_reload
+    ;;
+
+    *)
+        echo "Usage: $0 (start|stop|reload)"
+esac
+

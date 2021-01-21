@@ -1,0 +1,13 @@
+This is a system daemon implementing the TPM2 access broker (TAB) & Resource
+Manager (RM) spec from the TCG. The daemon (tpm2-abrmd) is implemented using
+Glib and the GObject system.
+
+Check your system to support TPM 2.0:
+
+# dmesg | grep -i tpm
+# [16.053307] tpm_tis STM7304:00: 2.0 TPM (device-id 0x0, rev-id 78)
+
+And check to load modules for tpm:
+
+# lsmod | grep tpm
+
