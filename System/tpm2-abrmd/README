@@ -11,3 +11,19 @@ And check to load modules for tpm:
 
 # lsmod | grep tpm
 
+If you want to start the tpm2-abrmd daemon at boot, add this to
+/etc/rc.d/rc.local
+
+    #Start tpm2-abrmd
+    if [ -x /etc/rc.d/rc.tpm2-abrmd ]; then
+        /etc/rc.d/rc.tpm2-abrmd start
+    fi
+
+and if you want it to stop at shutdown add this to
+/etc/rc.d/rc.local_shutdown
+
+    #Stop tpm2-abrmd
+    if [ -x /etc/rc.d/rc.tpm2-abrmd ]; then
+        /etc/rc.d/rc.tpm2-abrmd stop
+    fi
+
