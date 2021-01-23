@@ -87,12 +87,12 @@ cd ..
 mkdir -p $PKG/etc/profile.d/
 cat << EOF > $PKG/etc/profile.d/intel-media-driver.csh
 #!/bin/csh
-setenv LIBVA_DRIVERS=/usr/lib"${LIBDIRSUFFIX}"/dri/
+setenv LIBVA_DRIVERS=/usr/lib${LIBDIRSUFFIX}/dri/
 setenv LIBVA_DRIVERS_NAME=iHD
 EOF
 cat << EOF > $PKG/etc/profile.d/intel-media-driver.sh
 #!/bin/sh
-export LIBVA_DRIVERS=/usr/lib"${LIBDIRSUFFIX}/dri/
+export LIBVA_DRIVERS=/usr/lib${LIBDIRSUFFIX}/dri/
 export LIBVA_DRIVERS_NAME=iHD
 EOF
 chmod 0755 $PKG/etc/profile.d/*
