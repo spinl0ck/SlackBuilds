@@ -1,0 +1,8 @@
+PRGNAM="ujson"
+VERSION="4.0.2"
+HOMEPAGE="https://github.com/ultrajson/ultrajson"
+DOWNLOAD="https://files.pythonhosted.org/packages/86/0a/80d87aa4ee79980bddabef13cb7d95de330f85355cf08dfdaf874889b02b/ujson-4.0.2.tar.gz"
+SHA256SUM="c615a9e9e378a7383b756b7e7a73c38b22aeb8967a8bfbffd4741f7ffd043c4d"
+REQUIRES="setuptools_scm"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
