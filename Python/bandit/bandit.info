@@ -1,0 +1,8 @@
+PRGNAM="bandit"
+VERSION="1.7.0"
+HOMEPAGE="https://github.com/PyCQA/bandit"
+DOWNLOAD="https://files.pythonhosted.org/packages/6c/a1/14b70b67ea9c69e863dd65386bbc948ae34a502512d6f36e2a5a9fd5513b/bandit-1.7.0.tar.gz"
+SHA256SUM="8a4c7415254d75df8ff3c3b15cfe9042ecee628a1e40b44c15a98890fbfc2608"
+REQUIRES="pbr, stevedore, PyYAML, GitPython"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
