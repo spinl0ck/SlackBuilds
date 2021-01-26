@@ -1,0 +1,15 @@
+A python 2.7 and 3.5+ implementation of the
+Language Server Protocol.
+
+Example for Vim configuration with vim-lsp,
+install vim-lsp with your favorite vim tools
+like Plug or Vundle and add this for your
+vimrc file:
+
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'allowlist': ['python'],
+        \ })
+endif

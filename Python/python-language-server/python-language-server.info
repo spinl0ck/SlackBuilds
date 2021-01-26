@@ -1,0 +1,8 @@
+PRGNAM="python-language-server"
+VERSION="0.36.2"
+HOMEPAGE="https://github.com/palantir/python-language-server"
+DOWNLOAD="https://files.pythonhosted.org/packages/66/30/0c31b052ede62bbeddf4110db57c78d3c704506178caa18b2f0be2271293/python-language-server-0.36.2.tar.gz"
+SHA256SUM="9984c84a67ee2c5102c8e703215f407fcfa5e62b0ae86c9572d0ada8c4b417b0"
+REQUIRES="jedi, python-jsonrpc-server, pluggy, ujson "
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
