@@ -1,0 +1,8 @@
+PRGNAM="python-jsonrpc-server"
+VERSION="0.4.0"
+HOMEPAGE="https://github.com/palantir/python-jsonrpc-server"
+DOWNLOAD="https://files.pythonhosted.org/packages/81/7d/c4c4102b94ef2e090d94fc02625653d3d3a0306e53ef24bcb6e9496bfc1e/python-jsonrpc-server-0.4.0.tar.gz"
+SHA256SUM="62c543e541f101ec5b57dc654efc212d2c2e3ea47ff6f54b2e7dcb36ecf20595"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
