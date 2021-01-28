@@ -1,0 +1,8 @@
+PRGNAM="nlohmann-json"
+VERSION="3.9.1"
+HOMEPAGE="https://github.com/nlohmann/json"
+DOWNLOAD="https://github.com/nlohmann/json/archive/v3.9.1/json-3.9.1.tar.gz"
+SHA256SUM="4cf0df69731494668bdd6460ed8cb269b68de9c19ad8c27abc24cd72605b2d5b"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
