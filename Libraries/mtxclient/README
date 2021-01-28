@@ -1,0 +1,2 @@
+Client API library for the Matrix protocol,
+built on top of Boost.Asio.
