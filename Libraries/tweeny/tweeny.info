@@ -1,0 +1,8 @@
+PRGNAM="tweeny"
+VERSION="3.1.1"
+HOMEPAGE="https://github.com/mobius3/tweeny"
+DOWNLOAD="https://github.com/mobius3/tweeny/archive/v3.1.1/tweeny-3.1.1.tar.gz"
+SHA256SUM="33d2f439eec49bdd8464bd8017381d6e50af898342be217a254fd2cef2b3bb0f"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
