@@ -86,7 +86,7 @@ cd build
   make -j4 V=1
 cd ..
 
-mkdir -p $PKG/{usr/include/ableton,bin}
+mkdir -p $PKG/{usr/include/ableton,/usr/bin}
 install -vDm 755 build/bin/*  -t "$PKG/usr/bin/"
 install -vDm 644 include/ableton/*.{hpp,ipp} -t "$PKG/usr/include/ableton"
 
