@@ -72,13 +72,14 @@ find . \
     \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
     -exec chmod 644 {} \+
 
-patch -p0 < $CWD/abletonlink_system_libs.patch
+patch -p0 < $CWD/abletonlink_asio_system.patch
+patch -p0 < $CWD/abletonlink_catch_system.patch
 
 mkdir -p build
 cd build
   cmake \
     -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS" \
-    -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS" \
+    -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS -I/usr/include/catch2" \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DLINK_BUILD_JACK=ON \
     -DLINK_BUILD_QT_EXAMPLES=ON \

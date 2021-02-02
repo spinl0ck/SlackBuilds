@@ -1,3 +1,5 @@
 Ableton Link, a technology that synchronizes musical beat, tempo,
 and phase across multiple applications running on one or more devices.
 
+Optional dependecies: portaudio, jack
+

@@ -1,0 +1,9 @@
+--- cmake_include/CatchConfig.cmake.orig	2021-02-02 20:11:41.808896252 +0300
++++ cmake_include/CatchConfig.cmake	2021-02-02 20:12:27.195897549 +0300
+@@ -1,6 +1,2 @@
+ add_library(Catch::Catch IMPORTED INTERFACE)
+ 
+-set_property(TARGET Catch::Catch APPEND PROPERTY
+-  INTERFACE_INCLUDE_DIRECTORIES
+-  ${CMAKE_SOURCE_DIR}/third_party/catch
+-)
