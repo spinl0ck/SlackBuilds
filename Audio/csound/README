@@ -1,0 +1,11 @@
+ Csound is a unit generator-based, user-programmable computer music system.
+ It was originally written by Barry Vercoe at the Massachusetts Institute of
+ Technology in 1984 as the first C language version of this type of software.
+ Since then Csound has received numerous contributions from researchers,
+ programmers, and musicians from around the world.
+
+ See https://csound.com/docs/manual/index.html for more information.
+
+ Optional dependecies: liblo, portaudio, jack, portmidi, stk, abletonlink
+
+

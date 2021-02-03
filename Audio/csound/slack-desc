@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.
+# Line up the first '|' above the ':' following the base package name, and
+# the '|' on the right side marks the last column you can put a character in.
+# You must make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':' except on otherwise blank lines.
+
+       |-----handy-ruler------------------------------------------------------|
+csound: csound (computer programming language for sound)
+csound:
+csound: Csound is a sound and music computing system which was originally
+csound: developed by Barry Vercoe in 1985 at MIT Media Lab. Since the 90s,
+csound: it has been developed by a group of core developers.
+csound:
+csound:
+csound:
+csound:
+csound: Homepage: https://csound.com
+csound:

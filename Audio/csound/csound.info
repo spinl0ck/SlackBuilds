@@ -1,0 +1,8 @@
+PRGNAM="csound"
+VERSION="6.15.0"
+HOMEPAGE="https://csound.com/"
+DOWNLOAD="https://github.com/csound/csound/archive/6.15.0/csound-6.15.0.tar.gz"
+SHA256SUM="d47ed0fb70c752cb06ee2655ee9f010d8d1e369fc73d09d2ac2bc1b3060bf724"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

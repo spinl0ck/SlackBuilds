@@ -1,0 +1,141 @@
+#!/bin/sh
+
+# Slackware build script for csound
+
+# Copyright 2019 - 2021, Dmitry (spinl0ck) Iskhakov, Russia.
+# All rights reserved.
+#
+# Redistribution and use of this script, with or without modification, is
+# permitted provided that the following conditions are met:
+#
+# 1. Redistributions of this script must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
+#  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+#  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+#  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+#  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+#  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+PRGNAM=csound
+VERSION=${VERSION:-6.15.0}
+BUILD=${BUILD:-1}
+TAG=${TAG:-_SBo}
+
+ABLETONLINK=${ABLETONLINK:-no}
+STK=${STK:-no}
+
+if [ -z "$ARCH" ]; then
+  case "$( uname -m )" in
+    i?86) ARCH=i586 ;;
+    arm*) ARCH=arm ;;
+       *) ARCH=$( uname -m ) ;;
+  esac
+fi
+
+CWD=$(pwd)
+TMP=${TMP:-/tmp/SBo}
+PKG=$TMP/package-$PRGNAM
+OUTPUT=${OUTPUT:-/tmp}
+
+if [ "$ARCH" = "i586" ]; then
+  SLKCFLAGS="-O2 -march=i586 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "i686" ]; then
+  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2 -fPIC"
+  LIBDIRSUFFIX="64"
+else
+  SLKCFLAGS="-O2"
+  LIBDIRSUFFIX=""
+fi
+
+set -e 
+
+rm -rf $PKG
+mkdir -p $TMP $PKG/usr/{doc,man} $OUTPUT
+cd $TMP
+rm -rf $PRGNAM-$VERSION
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
+cd $PRGNAM-$VERSION
+
+chown -R root:root .
+find . \
+    \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
+    -exec chmod 755 {} \+ -o \
+    \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
+    -exec chmod 644 {} \+
+
+if [ "$ABLETONLINK" = "yes" ]; then
+    with_abletonlink="-DBUILD_ABLETON_LINK_OPCODES=ON"
+    inc_abletonlink="-DABLETON_LINK_HOME=/usr/include/ableton"
+else
+    with_abletonlink="-DBUILD_ABLETON_LINK_OPCODES=OFF"
+    inc_abletonlink=""
+fi
+
+sed -i 's/python/python3/g' CMakeLists.txt
+
+mkdir -p build
+cd build
+  cmake \
+    -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS" \
+    -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS" \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DLIBRARY_INSTALL_DIR=/usr/lib${LIBDIRSUFFIX} \
+    -DUSE_LIB64=ON \
+    -DBUILD_LINEAR_ALGEBRA_OPCODES=OFF \
+    -DJAVA_MODULE_INSTALL_DIR=/usr/lib${LIBDIRSUFFIX}/java \
+    -DBUILD_STATIC_LIBRARY=ON \
+    $with_abletonlink \
+    $inc_abletonlink \
+    -DBUILD_RELEASE=ON \
+     ..
+  make -j2 V=1
+  doxygen Doxyfile
+  make install DESTDIR=$PKG
+cd ..
+
+mkdir -p $PKG/etc/profile.d/
+cat << EOF > $PKG/etc/profile.d/csound.csh
+#!/bin/csh
+setenv OPCODE6DIR /usr/lib${LIBDIRSUFFIX}/csound/plugins64-6.0
+setenv CSSTRING /usr/share/locale
+EOF
+cat << EOF > $PKG/etc/profile.d/csound.sh
+export OPCODE6DIR=/usr/lib${LIBDIRSUFFIX}/csound/plugins64-6.0
+export CSSTRING=/usr/share/locale
+EOF
+chmod 0755 $PKG/etc/profile.d/csound.csh
+chmod 0755 $PKG/etc/profile.d/csound.sh
+
+find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF \
+  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
+
+mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
+
+mv build/docs/man $PKG/usr/
+gzip -9 $PKG/usr/man/man?/*.?
+
+cd build/docs/latex
+make
+cp -a *.pdf $PKG/usr/doc/$PRGNAM-$VERSION
+cd -
+
+cp -a \
+  *.md INSTALLING \
+  $PKG/usr/doc/$PRGNAM-$VERSION
+cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-tgz}
