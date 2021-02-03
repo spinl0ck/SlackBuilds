@@ -28,7 +28,6 @@ BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
 ABLETONLINK=${ABLETONLINK:-no}
-STK=${STK:-no}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
