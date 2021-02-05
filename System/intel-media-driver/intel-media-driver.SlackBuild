@@ -79,6 +79,9 @@ cd build_media
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DLIB_SUFFIX=${LIBDIRSUFFIX} \
     -DINSTALL_DRIVER_SYSCONF=OFF \
+    -DUSE_X11=ON \
+    -DLATEST_CPP_NEEDED=ON \
+    -DPLATFORM=linux \
     -DCMAKE_BUILD_TYPE=Release ..
   make
   make install DESTDIR=$PKG
@@ -95,7 +98,8 @@ cat << EOF > $PKG/etc/profile.d/intel-media-driver.sh
 export LIBVA_DRIVERS=/usr/lib${LIBDIRSUFFIX}/dri/
 export LIBVA_DRIVERS_NAME=iHD
 EOF
-chmod 0755 $PKG/etc/profile.d/*
+chmod 0755 $PKG/etc/profile.d/intel-media-driver.csh
+chmod 0755 $PKG/etc/profile.d/intel-media-driver.sh
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
@@ -108,7 +112,6 @@ cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
-cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-tgz}
