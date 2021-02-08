@@ -1,0 +1,8 @@
+PRGNAM="acpica"
+VERSION="20210105"
+HOMEPAGE="http://www.acpica.org"
+DOWNLOAD="https://acpica.org/sites/acpica/files/acpica-unix-20210105.tar.gz"
+SHA256SUM="a9be7b749025e60f93fde2fe531bfe0d84a33641d3e0c9b0f6049f996dbb1ff8"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
