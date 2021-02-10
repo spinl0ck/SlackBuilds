@@ -91,8 +91,7 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | gr
 mkdir -p $PKG/usr/man
 cp -r $PKG/usr/share/bcc/man/man8 $PKG/usr/man/
 
-find $PKG/usr/man -type f -exec gzip -9 {} \;
-for i in $( find $PKG/usr/man -type l );do ln -s $( readlink $i ).gz $i.gz;rm $i;done
+find $PKG/usr/man -type f -exec gzip -9 {} \+
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -ar \
