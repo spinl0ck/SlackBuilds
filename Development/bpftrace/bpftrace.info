@@ -1,0 +1,8 @@
+PRGNAM="bpftrace"
+VERSION="0.11.4"
+HOMEPAGE="https://github.com/iovisor/bpftrace"
+DOWNLOAD="https://github.com/iovisor/bpftrace/archive/v0.11.4/bpftrace-0.11.4.tar.gz"
+SHA256SUM="5b9c7509887e4337841e3188eabcc7247bc2c1cc312c983cbb8b77e341d20242"
+REQUIRES="bcc, libbpf"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
