@@ -54,7 +54,23 @@ else
   LIBDIRSUFFIX=""
 fi
 
-set -e
+failout() {
+    echo "Kernel config should be set options CONFIG_BPF, CONFIG_BPF_EVENTS,"
+    echo "CONFIG_BPF_JIT, CONFIG_BPF_SYSCALL, CONFIG_FTRACE_SYSCALLS and CONFIG_HAVE_EBPF_JIT."
+    echo "You need to set this options and recompile kernel."
+    exit 1
+}
+
+opts=('CONFIG_BPF' 'CONFIG_BPF_EVENTS' 'CONFIG_BPF_JIT' 'CONFIG_BPF_SYSCALL' 'CONFIG_FTRACE_SYSCALLS' 'CONFIG_HAVE_EBPF_JIT')
+
+for opt in "${opts[@]}"; do
+    if ! grep -q -E "^$opt" /boot/config; then
+        echo "Option $opt does not set."
+        failout
+    fi
+done
+
+set -eu
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
