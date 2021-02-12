@@ -55,7 +55,25 @@ else
   LIBDIRSUFFIX=""
 fi
 
-set -e
+failout() {
+    echo "Kernel config should be set options CONFIG_BPF, CONFIG_BPF_SYSCALL,"
+    echo "CONFIG_NET_CLS_BPF, CONFIG_NET_ACT_BPF, CONFIG_HAVE_EBPF_JIT, CONFIG_BPF_EVENTS,"
+    echo "CONFIG_DEBUG_INFO, CONFIG_FUNCTION_TRACER, CONFIG_KALLSYMS_ALL, CONFIG_KPROBES."
+    echo "You need to set this options and recompile kernel."
+    exit 1
+}
+
+opts=('CONFIG_BPF' 'CONFIG_BPF_SYSCALL' 'CONFIG_NET_CLS_BPF' 'CONFIG_NET_ACT_BPF' 'CONFIG_HAVE_EBPF_JIT'
+'CONFIG_BPF_EVENTS' 'CONFIG_DEBUG_INFO' 'CONFIG_FUNCTION_TRACER' 'CONFIG_KALLSYMS_ALL' 'CONFIG_KPROBES')
+
+for opt in "${opts[@]}"; do
+    if ! grep -q -E "^$opt" /boot/config; then
+        echo "Option $opt does not set"
+        failout
+    fi
+done
+
+set -eu
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
@@ -81,12 +99,16 @@ cmake \
     -DPYTHON_CMD=python3 \
     -DWITH_LUAJIT=1 \
     -DCMAKE_BUILD_TYPE=Release ..
-make -j4
+make -j2
 make DESTDIR=$PKG install
 cd ..
 
 mv $PKG/usr/share/bcc/man $PKG/usr/man
 find $PKG/usr/man -type f -exec gzip -9 {} \+
+
+for tool in $(find $PKG/usr/share/bcc/tools/ -print0 | xargs -0 file | grep "Python script" | cut -f 1 -d :); do
+    sed -i "1 s|/usr/bin/python|/usr/bin/python3|" $tool
+done
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -ar \
