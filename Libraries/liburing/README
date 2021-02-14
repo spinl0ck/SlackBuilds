@@ -1,0 +1,3 @@
+Linux-native io_uring I/O access library. Provides native async
+IO for the Linux kernel, in a fast and efficient manner, for both
+buffered and O_DIRECT.

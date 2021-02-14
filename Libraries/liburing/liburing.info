@@ -1,0 +1,8 @@
+PRGNAM="liburing"
+VERSION="0.7"
+HOMEPAGE="https://git.kernel.dk/cgit/liburing"
+DOWNLOAD="https://git.kernel.dk/cgit/liburing/snapshot/liburing-0.7.tar.gz"
+SHA256SUM="05d0cf8493d573c76b11abfcf34aabc7153affebe17ff95f9ae88b0de062a59d"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
