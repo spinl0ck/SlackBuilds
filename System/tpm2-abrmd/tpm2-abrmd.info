@@ -1,8 +1,8 @@
 PRGNAM="tpm2-abrmd"
-VERSION="2.3.3"
+VERSION="2.4.0"
 HOMEPAGE="https://github.com/tpm2-software/tpm2-abrmd"
-DOWNLOAD="https://github.com/tpm2-software/tpm2-abrmd/releases/download/2.3.3/tpm2-abrmd-2.3.3.tar.gz"
-SHA256SUM="1e587808c6739079d59f124d9c1a0058f8d34dd84f1f656c946667fa0a181c48"
+DOWNLOAD="https://github.com/tpm2-software/tpm2-abrmd/releases/download/2.4.0/tpm2-abrmd-2.4.0.tar.gz
+SHA256SUM="044522f1568f3d5334878f0564f808ec9fdd6a4ac5d0f3bd75ae6f2c7551a96c"
 REQUIRES="tpm2-tss cmocka swtpm"
 MAINTAINER="Dmitry (spinl0ck) Iskhakov"
 EMAIL="spinl0ck[at]protonmail.com"

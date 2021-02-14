@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=tpm2-abrmd
-VERSION=${VERSION:-2.3.3}
+VERSION=${VERSION:-2.4.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -87,12 +87,12 @@ CXXFLAGS="$SLKCFLAGS" \
 make -j2
 make install DESTDIR=$PKG
 
-install -D -m 0755 $CWD/rc.tpm2-abrmd $PKG/etc/rc.d/rc.tpm2-abrmd.new
+install -D -m 0644 $CWD/rc.tpm2-abrmd $PKG/etc/rc.d/rc.tpm2-abrmd.new
+
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 find $PKG/usr/man -type f -exec gzip -9 {} \;
-for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
 find $PKG/usr/lib${LIBDIRSUFFIX}/ -type f -name '*.la' -exec rm -vf {} \; || true
 
