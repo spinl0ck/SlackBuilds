@@ -1,0 +1,8 @@
+PRGNAM="ibm-sw-tpm2"
+VERSION="1637"
+HOMEPAGE="https://ibmswtpm.sourceforge.net/ibmswtpm2.html"
+DOWNLOAD="https://sourceforge.net/projects/ibmswtpm2/files/ibmtpm1637.tar.gz"
+SHA256SUM="dd3a4c3f7724243bc9ebcd5c39bbf87b82c696d1c1241cb8e5883534f6e2e327"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
