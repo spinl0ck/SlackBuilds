@@ -1,4 +1,4 @@
-ACPI CA includes:
+ACPICA includes:
  - iasl, an ASL compiler/decompiler
  - acpisrc, a source code conversion tool
  - acpiexec, a user-space AML interpreter
