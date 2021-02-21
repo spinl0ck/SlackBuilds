@@ -1,0 +1,8 @@
+PRGNAM="tpm2-tss-engine"
+VERSION="1.1.0"
+HOMEPAGE="https://github.com/tpm2-software/tpm2-tss-engine"
+DOWNLOAD="https://github.com/tpm2-software/tpm2-tss-engine/releases/download/v1.1.0/tpm2-tss-engine-1.1.0.tar.gz"
+SHA256SUM="ea2941695ac221d23a7f3e1321140e75b1495ae6ade876f2f4c2ed807c65e2a5"
+REQUIRES="tpm2-tss"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
