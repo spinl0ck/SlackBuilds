@@ -1,0 +1,8 @@
+PRGNAM="python-socks"
+VERSION="1.2.1"
+HOMEPAGE="https://github.com/romis2012/python-socks"
+DOWNLOAD="https://files.pythonhosted.org/packages/20/54/50a6657b988bf5cefb15254281860f4541bfdbc93c2987254b3f7f7330d8/python-socks-1.2.1.tar.gz"
+SHA256SUM="9e6f4d397488edb29594c31a9e28810956728737b57cf88b2db7b79655dea7e9"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
