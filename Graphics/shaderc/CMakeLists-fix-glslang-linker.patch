@@ -1,0 +1,13 @@
+--- libshaderc_util/CMakeLists.txt	2021-02-20 00:08:08.000000000 +0300
++++ libshaderc_util/CMakeLists.txt	2021-02-23 14:40:08.129451175 +0300
+@@ -46,8 +46,8 @@
+ 
+ find_package(Threads)
+ target_link_libraries(shaderc_util PRIVATE
+-  glslang OSDependent OGLCompiler HLSL glslang SPIRV
+-  SPIRV-Tools-opt ${CMAKE_THREAD_LIBS_INIT})
++  glslang MachineIndependent GenericCodeGen OSDependent OGLCompiler HLSL glslang SPIRV
++  SPIRV-Tools-opt SPIRV-Tools ${CMAKE_THREAD_LIBS_INIT})
+ 
+ shaderc_add_tests(
+   TEST_PREFIX shaderc_util

@@ -1,0 +1,11 @@
+--- libshaderc/CMakeLists.txt	2021-02-20 00:08:08.000000000 +0300
++++ libshaderc/CMakeLists.txt	2021-02-23 14:34:51.837442139 +0300
+@@ -114,7 +114,7 @@
+ 
+ shaderc_add_tests(
+   TEST_PREFIX shaderc_combined
+-  LINK_LIBS shaderc_combined ${CMAKE_THREAD_LIBS_INIT}
++  LINK_LIBS shaderc_combined ${SHADERC_LIBS}
+   INCLUDE_DIRS include ${shaderc_SOURCE_DIR}/libshaderc_util/include ${glslang_SOURCE_DIR}
+                ${spirv-tools_SOURCE_DIR}/include
+                ${SPIRV-Headers_SOURCE_DIR}/include

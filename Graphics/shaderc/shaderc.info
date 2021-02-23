@@ -1,0 +1,8 @@
+PRGNAM="shaderc"
+VERSION="2020.5"
+HOMEPAGE="https://github.com/google/shaderc"
+DOWNLOAD="https://github.com/google/shaderc/archive/v2020.5/shaderc-2020.5.tar.gz"
+SHA256SUM="e96d8cb208b796cecb9e6cce437c7d1116343158ef3ea26277eb13b62cf56834"
+REQUIRES="vulkan-sdk"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
