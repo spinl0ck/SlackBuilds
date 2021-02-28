@@ -71,8 +71,8 @@ find -L . \
 
 mkdir -p build
 cd build
-  CFLAGS="$SLKCFLAGS" \
-  CXXFLAGS="$SLKCFLAGS" \
+CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
   meson .. \
     --infodir=/usr/info \
     --mandir=/usr/man \
