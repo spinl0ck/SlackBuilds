@@ -1,0 +1,12 @@
+# libyuv pkg-config file
+
+prefix=/usr
+exec_prefix=${prefix}
+libdir=/usr/lib64
+includedir=${prefix}/include
+
+Name: libyuv
+Description: YUV conversion and scaling functionality library
+URL: https://chromium.googlesource.com/libyuv/libyuv
+Version: 1777
+Libs: -lyuv
