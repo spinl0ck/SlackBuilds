@@ -1,0 +1,8 @@
+PRGNAM="libyuv"
+VERSION=""
+HOMEPAGE="https://chromium.googlesource.com/libyuv/libyuv"
+DOWNLOAD="https://chromium.googlesource.com/libyuv/libyuv.git/+archive/d7687742995c4cb004fbbc5cffc7c9e0d22ec7e5.tar.gz"
+SHA256SUM="3451e16c2d8d077cb3e13cf3cdfe4332a962fbf5e51bdb3320c42fafbbb8cfad"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

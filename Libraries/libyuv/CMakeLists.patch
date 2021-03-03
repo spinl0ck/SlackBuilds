@@ -1,0 +1,21 @@
+--- CMakeLists.txt.orig	2021-03-03 16:58:30.941711210 +0300
++++ CMakeLists.txt	2021-03-03 17:05:43.353723564 +0300
+@@ -38,7 +38,7 @@
+ INCLUDE ( FindJPEG )
+ if (JPEG_FOUND)
+   include_directories( ${JPEG_INCLUDE_DIR} )
+-  target_link_libraries( yuvconvert ${JPEG_LIBRARY} )
++  target_link_libraries( ${ly_lib_shared} ${JPEG_LIBRARY} )
+   add_definitions( -DHAVE_JPEG )
+ endif()
+ 
+@@ -82,8 +82,7 @@
+ 
+ # install the conversion tool, .so, .a, and all the header files
+ INSTALL ( PROGRAMS ${CMAKE_BINARY_DIR}/yuvconvert			DESTINATION bin )
+-INSTALL ( TARGETS ${ly_lib_static}						DESTINATION lib )
+-INSTALL ( TARGETS ${ly_lib_shared} LIBRARY				DESTINATION lib RUNTIME DESTINATION bin )
++INSTALL ( TARGETS ${ly_lib_shared} LIBRARY				DESTINATION lib${LIB_SUFFIX} RUNTIME DESTINATION bin )
+ INSTALL ( DIRECTORY ${PROJECT_SOURCE_DIR}/include/		DESTINATION include )
+ 
+ # create the .deb and .rpm packages using cpack
