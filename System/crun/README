@@ -1,0 +1,5 @@
+A fast and low-memory footprint OCI Container Runtime fully
+written in C.
+
+crun conforms to the OCI Container Runtime specifications:
+   https://github.com/opencontainers/runtime-spec
