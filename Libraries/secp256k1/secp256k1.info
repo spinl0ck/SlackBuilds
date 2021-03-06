@@ -1,0 +1,8 @@
+PRGNAM="secp256k1"
+VERSION="20201021"
+HOMEPAGE="https://github.com/bitcoin-core/secp256k1"
+DOWNLOAD="https://github.com/bitcoin-core/secp256k1/archive/ac05f61fcf639a15b5101131561620303e4bd808/libsecp256k1-20201021+1209+gac05f61.tar.gz"
+SHA256SUM="a5a5971f4534c0880602bcd0cf43d95ea8dcb278b5c161d55eae979fe3fb196b"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
