@@ -1,0 +1,8 @@
+PRGNAM="libebml"
+VERSION="1.4.2"
+HOMEPAGE="https://github.com/Matroska-Org/libebml"
+DOWNLOAD="https://dl.matroska.org/downloads/libebml/libebml-1.4.2.tar.xz"
+SHA256SUM="41c7237ce05828fb220f62086018b080af4db4bb142f31bec0022c925889b9f2"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
