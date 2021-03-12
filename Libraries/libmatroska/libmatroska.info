@@ -1,0 +1,8 @@
+PRGNAM="libmatroska"
+VERSION="1.6.3"
+HOMEPAGE="https://github.com/Matroska-Org/libmatroska"
+DOWNLOAD="https://dl.matroska.org/downloads/libmatroska/libmatroska-1.6.3.tar.xz"
+SHA256SUM="daf91a63f58dd157ca340c457871e66260cb9c3333fefb008b318befbb0e081a"
+REQUIRES="libebml"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
