@@ -1,0 +1,46 @@
+#!/bin/sh
+# Start/stop/restart jitterentropy.
+
+PIDFILE="/var/run/jitterentropy-rngd.pid"
+RNGD_OPTS="-p $PIDFILE"
+
+# Start jitterentropy-rngd :
+jitterentropy_start() {
+  if [ -f $PIDFILE ]; then
+    echo "jitterentropy-rngd is already running as PID $(cat $PIDFILE) " >&2
+    exit 3
+  elif [ -x /usr/bin/jitterentropy-rngd ]; then
+    echo "Starting jitterentropy-rngd  entropy daemon:  /usr/bin/jitterentropy-rngd"
+    /usr/bin/jitterentropy-rngd $RNGD_OPTS 2> /dev/null
+  fi
+}
+
+# Stop jitterentropy-rngd :
+jitterentropy_stop() {
+  if [ -r $PIDFILE ]; then
+    echo "Stopping jitterentropy."
+    kill $(cat $PIDFILE)
+  fi
+}
+
+# Restart jitterentropy-rngd:
+jitterentropy_restart() {
+  jitterentropy_stop
+  sleep 1
+  jitterentropy_start
+}
+
+case "$1" in
+'start')
+  jitterentropy_start
+  ;;
+'stop')
+  jitterentropy_stop
+  ;;
+'restart')
+  jitterentropy_restart
+  ;;
+*)
+  echo "usage $0 start|stop|restart"
+  exit 2
+esac

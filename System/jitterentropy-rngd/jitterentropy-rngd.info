@@ -1,0 +1,8 @@
+PRGNAM="Jitter RNGD"
+VERSION="1.2.1"
+HOMEPAGE="https://www.chronox.de/jent.html"
+DOWNLOAD="https://www.chronox.de/jent/jitterentropy-rngd-1.2.1.tar.xz"
+SHA256SUM="3788519cfb1253a50d1d857528a0d68aacf267953b34cd2c50d11e6f263ccd51"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

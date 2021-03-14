@@ -1,0 +1,30 @@
+--- Makefile.orig	2021-03-14 21:57:10.725275255 +0300
++++ Makefile	2021-03-14 21:58:38.061277750 +0300
+@@ -21,8 +21,7 @@
+ # Change as necessary
+ DESTDIR :=
+ INSTALL ?= install
+-PREFIX := /usr/local
+-UNITDIR ?= $(shell pkg-config --variable=systemdsystemunitdir systemd 2>/dev/null || echo /usr/lib/systemd/system)
++PREFIX := /usr
+ 
+ NAME := jitterentropy-rngd
+ #C_SRCS := $(wildcard *.c)
+@@ -50,15 +49,11 @@
+ 	$(STRIP) --strip-unneeded $(NAME)
+ 
+ install: strip
+-	$(INSTALL) -D -m 0755 $(NAME) $(DESTDIR)$(PREFIX)/sbin/$(NAME)
+-	$(INSTALL) -D -m 0644 $(NAME).1 $(DESTDIR)$(PREFIX)/share/man/man1/$(NAME).1
+-	gzip -9 $(DESTDIR)$(PREFIX)/share/man/man1/$(NAME).1
+-	sed "s|@PATH@|$(PREFIX)/sbin|" jitterentropy.service.in > jitterentropy.service
+-	$(INSTALL) -D -m 0644 jitterentropy.service $(DESTDIR)$(UNITDIR)/jitterentropy.service
++	$(INSTALL) -D -m 0755 $(NAME) $(DESTDIR)$(PREFIX)/bin/$(NAME)
++	$(INSTALL) -D -m 0644 $(NAME).1 $(DESTDIR)$(PREFIX)/man/man1/$(NAME).1
+ 
+ clean:
+ 	@- $(RM) $(NAME)
+ 	@- $(RM) $(OBJS)
+-	@- $(RM) jitterentropy.service
+ 
+ distclean: clean
