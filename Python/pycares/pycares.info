@@ -1,0 +1,8 @@
+PRGNAM="pycares"
+VERSION="3.1.1"
+HOMEPAGE="https://github.com/saghul/pycares"
+DOWNLOAD="https://files.pythonhosted.org/packages/4e/09/f49ef1c4b6a5ad50fc08a8acd015f1938594dd7a6b4a6a96d049d9bbec7d/pycares-3.1.1.tar.gz"
+SHA256SUM="18dfd4fd300f570d6c4536c1d987b7b7673b2a9d14346592c5d6ed716df0d104"
+REQUIRES="c-ares, cffi"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
