@@ -1,0 +1,8 @@
+PRGNAM="python-authres"
+VERSION="1.2.0"
+HOMEPAGE="https://launchpad.net/authentication-results-python"
+DOWNLOAD="https://files.pythonhosted.org/packages/6a/29/e28209b5d3d56c102845cca5a4a3abaf2724f79e83476a52b94d775ecce6/authres-1.2.0.tar.gz"
+SHA256SUM="93d1b995ad7ce21e62db649f361048125dd6022563a0ae8a23909465f1fd25b7"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
