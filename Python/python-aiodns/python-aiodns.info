@@ -1,0 +1,8 @@
+PRGNAM="python-aiodns"
+VERSION="2.0.0"
+HOMEPAGE="https://github.com/saghul/aiodns"
+DOWNLOAD="https://files.pythonhosted.org/packages/30/2e/b86ce168485b68d40c6a810838669deacf0abf41845c383659c2b613e69f/aiodns-2.0.0.tar.gz"
+SHA256SUM="815fdef4607474295d68da46978a54481dd1e7be153c7d60f9e72773cd38d77d"
+REQUIRES="pycares"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
