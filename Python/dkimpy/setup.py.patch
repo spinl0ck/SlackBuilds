@@ -1,0 +1,19 @@
+--- setup.py.orig	2021-03-19 23:30:00.080504765 +0300
++++ setup.py	2021-03-19 23:30:51.760506241 +0300
+@@ -60,11 +60,11 @@
+             'dknewkey = dkim.dknewkey:main'
+         ],
+     },
+-    data_files = [(os.path.join('share', 'man', 'man1'),
+-        ['man/arcsign.1']), (os.path.join('share', 'man', 'man1'),
+-        ['man/arcverify.1']),(os.path.join('share', 'man', 'man1'),
+-        ['man/dkimsign.1']), (os.path.join('share', 'man', 'man1'),
+-        ['man/dkimverify.1']),(os.path.join('share', 'man', 'man1'),
++    data_files = [(os.path.join('man', 'man1'),
++        ['man/arcsign.1']), (os.path.join('man', 'man1'),
++        ['man/arcverify.1']),(os.path.join('man', 'man1'),
++        ['man/dkimsign.1']), (os.path.join('man', 'man1'),
++        ['man/dkimverify.1']),(os.path.join('man', 'man1'),
+         ['man/dknewkey.1']),],
+     classifiers = [
+       'Development Status :: 5 - Production/Stable',

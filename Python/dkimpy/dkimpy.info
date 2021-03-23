@@ -1,0 +1,8 @@
+PRGNAM="dkimpy"
+VERSION="1.0.5"
+HOMEPAGE="https://launchpad.net/dkimpy"
+DOWNLOAD="https://files.pythonhosted.org/packages/b5/33/9c60f3a34d4d7237e5c21eb73e06a34f52c3a959fa20efb705e5b0b16d01/dkimpy-1.0.5.tar.gz"
+SHA256SUM="9a2420bf09af686736773153fca32a02ae11ecbe24b540c26104628959f91121"
+REQUIRES="authres, PyNaCl, aiodns"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
