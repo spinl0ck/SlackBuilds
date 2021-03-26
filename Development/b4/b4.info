@@ -1,0 +1,8 @@
+PRGNAM="b4"
+VERSION="0.6.2"
+HOMEPAGE="https://git.kernel.org/pub/scm/utils/b4/b4.git/tree/README.rst"
+DOWNLOAD="https://files.pythonhosted.org/packages/0c/98/acec1e27fe5ba2997a204765a5a73ce71c5d9ac72c1a0f81fce4312a778a/b4-0.6.2.tar.gz"
+SHA256SUM="1f99c91a5688975243962bcac1abe6d83656304a843d2b6641b473967c2320c9"
+REQUIRES="dkimpy"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
