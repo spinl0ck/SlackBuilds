@@ -1,0 +1,3 @@
+This module allows an application to parse and evaluate email
+authentication policy, to application supplied TXT RR, SPF and
+DKIM results

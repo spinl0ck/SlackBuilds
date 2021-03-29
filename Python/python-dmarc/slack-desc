@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.
+# Line up the first '|' above the ':' following the base package name, and
+# the '|' on the right side marks the last column you can put a character in.
+# You must make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':' except on otherwise blank lines.
+
+            |-----handy-ruler------------------------------------------------------|
+python-dmarc: python-dmarc
+python-dmarc:
+python-dmarc:
+python-dmarc: This module allows an application to parse and evaluate email
+python-dmarc: authentification policy, to application supplied TXT RR, SPF and DKIM
+python-dmarc: results.
+python-dmarc:
+python-dmarc:
+python-dmarc: Homepage: https://gitlab.com/duobradovic/pydmarc
+python-dmarc:
+python-dmarc:

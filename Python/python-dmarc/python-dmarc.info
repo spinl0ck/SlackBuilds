@@ -1,0 +1,8 @@
+PRGNAM="dmarc"
+VERSION="1.0.2"
+HOMEPAGE="https://gitlab.com/duobradovic/pydmarc"
+DOWNLOAD="https://files.pythonhosted.org/packages/bb/7c/cf224b6fc65ab7d99da89ecabd783573599a18bca7a1204a6d01375c5efb/dmarc-1.0.2.tar.gz"
+SHA256SUM="48a9a14a8e41a0695a83ee1893af3a43f94c722c59f07a5926535e6ca6f326d9"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
