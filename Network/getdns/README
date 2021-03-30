@@ -1,0 +1,4 @@
+getdns is an implementation of a modern asynchronous DNS API; the
+specification was originally edited by Paul Hoffman. It is intended
+to make all types of DNS information easily available to application
+developers and non-DNS experts.
