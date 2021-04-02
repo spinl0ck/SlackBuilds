@@ -1,0 +1,8 @@
+PRGNAM="aiosqlite"
+VERSION="0.17.0"
+HOMEPAGE="https://https://aiosqlite.omnilib.dev/en/stable/"
+DOWNLOAD="https://files.pythonhosted.org/packages/40/e0/ad1edd74311831ca71b32a5b83352b490d78d11a90a1cde04e1b6830e018/aiosqlite-0.17.0.tar.gz"
+SHA256SUM="f0e6acc24bc4864149267ac82fb46dfb3be4455f99fe21df82609cc6e6baee51"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
