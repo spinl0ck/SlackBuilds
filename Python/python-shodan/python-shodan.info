@@ -1,0 +1,8 @@
+PRGNAM="shodan"
+VERSION="1.25.0"
+HOMEPAGE="http://github.com/achillean/shodan-python"
+DOWNLOAD="https://files.pythonhosted.org/packages/c8/87/ba5671b333f1016a306f2e762fe762fbc9c3696614f6db3ce6171641005f/shodan-1.25.0.tar.gz"
+SHA256SUM="7e2bddbc1b60bf620042d0010f4b762a80b43111dbea9c041d72d4325e260c23"
+REQUIRES="click, click-plugins, colorama, XlsxWriter"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
