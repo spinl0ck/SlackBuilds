@@ -25,7 +25,7 @@
 PRGNAM=intel-media-driver
 SRCNAM=intel-media
 SRCNAM2=media-driver
-VERSION=${VERSION:-20.4.5}
+VERSION=${VERSION:-21.1.3}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -73,18 +73,18 @@ find -L . \
 
 mkdir -p build_media
 cd build_media
-  cmake \
-    -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS" \
-    -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS" \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DLIB_SUFFIX=${LIBDIRSUFFIX} \
-    -DINSTALL_DRIVER_SYSCONF=OFF \
-    -DUSE_X11=ON \
-    -DLATEST_CPP_NEEDED=ON \
-    -DPLATFORM=linux \
-    -DCMAKE_BUILD_TYPE=Release ..
-  make
-  make install DESTDIR=$PKG
+cmake \
+  -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS" \
+  -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS" \
+  -DCMAKE_INSTALL_PREFIX=/usr \
+  -DLIB_SUFFIX=${LIBDIRSUFFIX} \
+  -DINSTALL_DRIVER_SYSCONF=OFF \
+  -DUSE_X11=ON \
+  -DLATEST_CPP_NEEDED=ON \
+  -DPLATFORM=linux \
+  -DCMAKE_BUILD_TYPE=Release ..
+make
+make install DESTDIR=$PKG
 cd ..
 
 mkdir -p $PKG/etc/profile.d/
@@ -105,9 +105,7 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | gr
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a \
-  README.md LICENSE.md \
-  $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a README.md LICENSE.md $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
