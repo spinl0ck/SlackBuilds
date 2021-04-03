@@ -1,0 +1,8 @@
+PRGNAM="rav1e"
+VERSION="0.4.1"
+HOMEPAGE="https://github.com/xiph/rav1e"
+DOWNLOAD="https://github.com/xiph/rav1e/archive/refs/tags/v0.4.1.tar.gz"
+SHA256SUM="b0be59435a40e03b973ecc551ca7e632e03190b5a20f944818afa3c2ecf4852d"
+REQUIRES="rust, cargo-c"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
