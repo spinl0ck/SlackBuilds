@@ -73,35 +73,34 @@ export CARGO_HOME=/home/$USER/.cargo
 export RUSTUP_HOME=/home/$USER/.rustup
 export RUSTC=/home/$USER/.cargo/bin/rustc
 CARGO=/home/$USER/.cargo/bin/cargo
-$CARGO fetch --locked --manifest-path Cargo.toml
-
-RUSTFLAGS="$SLKCFLAGS" \
-$CARGO build --release --frozen --manifest-path Cargo.toml
 
 RUSTFLAGS="$SLKCFLAGS" \
 $CARGO cbuild --release \
-  --frozen \
   --prefix /usr \
   --bindir /usr/bin \
+  --includedir /usr/include \
   --libdir /usr/lib${LIBDIRSUFFIX} \
   --pkgconfigdir /usr/lib${LIBDIRSUFFIX}/pkgconfig \
+  --destdir $PKG \
+  --jobs 4 \
   --manifest-path Cargo.toml
 
-$CARGO install --frozen --offline --no-track --path . --root $PKG/usr
-
 $CARGO cinstall --release \
-    --frozen \
     --prefix /usr \
     --bindir /usr/bin \
+    --includedir /usr/include \
     --libdir /usr/lib${LIBDIRSUFFIX} \
     --pkgconfigdir /usr/lib${LIBDIRSUFFIX}/pkgconfig \
+    --jobs 4 \
     --destdir $PKG
+
+find $PKG -type f \( -name '*.la' -o -name '*.a' \) -delete
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -ar LICENSE README.md examples/ \
+cp -ar LICENSE README.md examples/ doc/* \
   $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
