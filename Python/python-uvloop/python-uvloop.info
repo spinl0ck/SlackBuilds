@@ -1,0 +1,8 @@
+PRGNAM="python-uvloop"
+VERSION="0.15.2"
+HOMEPAGE="https://github.com/MagicStack/uvloop"
+DOWNLOAD="https://files.pythonhosted.org/packages/44/6e/0cb292e4e6ee1382e2ede458f90c94b4f990b261f738403ac45cb8183bc2/uvloop-0.15.2.tar.gz"
+SHA256SUM="2bb0624a8a70834e54dde8feed62ed63b50bad7a1265c40d6403a2ac447bce01"
+REQUIRES="libuv"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
