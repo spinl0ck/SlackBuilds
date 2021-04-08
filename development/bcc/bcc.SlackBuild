@@ -24,7 +24,7 @@
 
 PRGNAM=bcc
 SRCNAM=$PRGNAM-src-with-submodule
-VERSION=${VERSION:-0.18.0}
+VERSION=${VERSION:-0.19.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -96,6 +96,7 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=/usr/lib${LIBDIRSUFFIX} \
     -DKERNEL_INCLUDE_DIRS=/usr/src/linux-$(uname -r) \
+    -DENABLE_LLVM_SHARED=ON \
     -DPYTHON_CMD=python3 \
     -DWITH_LUAJIT=1 \
     -DCMAKE_BUILD_TYPE=Release ..
@@ -105,15 +106,17 @@ cd ..
 
 mv $PKG/usr/share/bcc/man $PKG/usr/man
 find $PKG/usr/man -type f -exec gzip -9 {} \+
+for manpage in $(find $PKG/usr/man -type l); do
+    ln -s $(readlink $manpage).gz $manpage.gz
+    rm $manpage
+done
 
 for tool in $(find $PKG/usr/share/bcc/tools/ -print0 | xargs -0 file | grep "Python script" | cut -f 1 -d :); do
     sed -i "1 s|/usr/bin/python|/usr/bin/python3|" $tool
 done
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -ar \
-   README.md LICENSE.txt docs/* \
-   $PKG/usr/doc/$PRGNAM-$VERSION
+cp -ar README.md LICENSE.txt docs/* $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
