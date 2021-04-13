@@ -1,0 +1,8 @@
+PRGNAM="cmake-lint"
+VERSION="1.4.1"
+HOMEPAGE="https://github.com/cmake-lint/cmake-lint"
+DOWNLOAD="https://github.com/cmake-lint/cmake-lint/archive/refs/tags/v1.4.1.tar.gz"
+SHA256SUM="f0e61cfaa8427e6e3076c8af91285a1fdfe70179334a6bfa73cc2e80bacda2f9"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
