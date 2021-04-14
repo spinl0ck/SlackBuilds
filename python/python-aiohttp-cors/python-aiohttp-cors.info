@@ -1,0 +1,8 @@
+PRGNAM="aiohttp_cors"
+VERSION="0.7.0"
+HOMEPAGE="https://github.com/aio-libs/aiohttp-cors"
+DOWNLOAD="https://files.pythonhosted.org/packages/44/9e/6cdce7c3f346d8fd487adf68761728ad8cd5fbc296a7b07b92518350d31f/aiohttp-cors-0.7.0.tar.gz"
+SHA256SUM="4d39c6d7100fd9764ed1caf8cebf0eb01bf5e3f24e2e073fda6234bc48b19f5d"
+REQUIRES="aiohttp"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
