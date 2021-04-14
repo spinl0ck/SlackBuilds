@@ -1,0 +1,8 @@
+PRGNAM="black"
+VERSION="20.8b1"
+HOMEPAGE="https://github.com/psf/black"
+DOWNLOAD="https://files.pythonhosted.org/packages/dc/7b/5a6bbe89de849f28d7c109f5ea87b65afa5124ad615f3419e71beb29dc96/black-20.8b1.tar.gz"
+SHA256SUM="1c02557aa099101b9d21496f8a914e9ed2222ef70336404eeeac8edba836fbea"
+REQUIRES="click, appdirs, toml, regex, pathspec, mypy_extensions"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
