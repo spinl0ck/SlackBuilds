@@ -27,7 +27,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=mpv
-VERSION=${VERSION:-0.33.0}
+VERSION=${VERSION:-0.33.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -44,8 +44,6 @@ TMP=${TMP:-/tmp/SBo}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
-# The SLKFLAGS aren't currently used. They do no harm and can
-#   be left as a placeholder in case they are ever needed.
 if [ "$ARCH" = "i586" ]; then
   SLKCFLAGS="-O2 -march=i586 -mtune=i686"
   LIBDIRSUFFIX=""
