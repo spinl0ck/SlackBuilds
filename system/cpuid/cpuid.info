@@ -1,0 +1,8 @@
+PRGNAM="cpuid"
+VERSION="20201006"
+HOMEPAGE="http://www.etallen.com/cpuid.html"
+DOWNLOAD="http://www.etallen.com/cpuid/cpuid-20201006.src.tar.gz"
+SHA256SUM="13c53f16408341d11ed489b352f218ec4dbb5bedb796a9d059e924770a9c56a6"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
