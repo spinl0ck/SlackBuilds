@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=lmdbxx
-VERSION=${VERSION:-0.9.14.0}
+VERSION=${VERSION:-1.0.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -72,9 +72,7 @@ find -L . \
 make PREFIX=/usr DESTDIR=$PKG install
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a \
-   README UNLICENSE INSTALL \
-   $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a README.md UNLICENSE INSTALL $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
