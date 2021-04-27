@@ -1,0 +1,8 @@
+PRGNAM="libspiro"
+VERSION="20200505"
+HOMEPAGE="https://github.com/fontforge/libspiro"
+DOWNLOAD="https://github.com/fontforge/libspiro/releases/download/20200505/libspiro-dist-20200505.tar.gz"
+SHA256SUM="06c69a1e8dcbcabcf009fd96fd90b1a244d0257246e376c2c4d57c4ea4af0e49"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
