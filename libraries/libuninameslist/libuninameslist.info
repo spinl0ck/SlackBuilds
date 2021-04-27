@@ -1,0 +1,8 @@
+PRGNAM="libuninameslist"
+VERSION="20200413"
+HOMEPAGE="https://github.com/fontforge/libuninameslist"
+DOWNLOAD="https://github.com/fontforge/libuninameslist/releases/download/20200413/libuninameslist-dist-20200413.tar.gz"
+SHA256SUM="5c0283b2e18d101e58b70a026119d66c9d3e749e4537def7799bba0bc8998f62"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
