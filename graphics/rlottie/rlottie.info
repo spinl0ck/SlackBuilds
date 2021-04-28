@@ -1,0 +1,8 @@
+PRGNAM="rlottie"
+VERSION="0.2"
+HOMEPAGE="https://github.com/Samsung/rlottie"
+DOWNLOAD="https://github.com/Samsung/rlottie/archive/refs/tags/v0.2.tar.gz"
+SHA256SUM="030ccbc270f144b4f3519fb3b86e20dd79fb48d5d55e57f950f12bab9b65216a"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
