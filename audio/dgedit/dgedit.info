@@ -1,0 +1,8 @@
+PRGNAM="dgedit"
+VERSION="0.10.0"
+HOMEPAGE="https://drumgizmo.org"
+DOWNLOAD="https://drumgizmo.org/releases/dgedit-0.10.0/dgedit-0.10.0.tar.gz"
+SHA256SUM="846f580d5a12eff7e5668893d18547c5a0032d2cf11b9bee37ac7ac094aa83e4"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
