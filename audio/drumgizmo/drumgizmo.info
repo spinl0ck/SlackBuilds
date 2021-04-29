@@ -1,0 +1,8 @@
+PRGNAM="drumgizmo"
+VERSION="0.9.19"
+HOMEPAGE="https://drumgizmo.org"
+DOWNLOAD="https://drumgizmo.org/releases/drumgizmo-0.9.19/drumgizmo-0.9.19.tar.gz"
+SHA256SUM="7426f38b58fbb82d3eada60c204d74e6c5de31ef424c017e3f890117e146a2a3"
+REQUIRES="libsmf, lv2"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
