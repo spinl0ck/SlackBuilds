@@ -75,6 +75,8 @@ find -L . \
 
 /usr/bin/autoreconf -i
 /usr/bin/automake --foreign -Wall
+CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
@@ -82,9 +84,7 @@ find -L . \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --enable-shared \
   --disable-static \
-  --build=$ARCH-slackware-linux \
-  CFLAGS="$SLKCFLAGS" \
-
+  --build=$ARCH-slackware-linux
 make
 make check
 make DESTDIR=$PKG install
