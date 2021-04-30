@@ -1,0 +1,8 @@
+PRGNAM="faust"
+VERSION="2.30.5"
+HOMEPAGE="http://faust.grame.fr/"
+DOWNLOAD="https://github.com/grame-cncm/faust/releases/download/2.30.5/faust-2.30.5.tar.gz"
+SHA256SUM="6cf64b8ee92c2db74d7d83d726b0ecb6f7e141deeadf4cd40c60e467893e0bfc"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
