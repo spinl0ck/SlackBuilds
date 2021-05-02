@@ -1,0 +1,8 @@
+PRGNAM="cymruwhois"
+VERSION="1.6"
+HOMEPAGE="https://pythonhosted.org/cymruwhois"
+DOWNLOAD="https://files.pythonhosted.org/packages/54/a9/183163481f717d435e9a971f28ce8360e4bc2fa2adc7311ab0d321b207d9/cymruwhois-1.6.tar.gz"
+SHA256SUM="b6c085e50e33133cd3718504521c780ed4d6b1e18e12c3bda6a0c949df7df254"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
