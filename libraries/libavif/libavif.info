@@ -1,0 +1,8 @@
+PRGNAM="libavif"
+VERSION="0.9.0"
+HOMEPAGE="https://github.com/AOMediaCodec/libavif"
+DOWNLOAD="https://github.com/AOMediaCodec/libavif/archive/v0.9.0/libavif-0.9.0.tar.gz"
+SHA256SUM="ea1603fc18e7dd20cf01f0b405156576886ecb5df84db8c0e87187cd2f8a00f4"
+REQUIRES="libaom, svt-av1, dav1d, rav1e"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
