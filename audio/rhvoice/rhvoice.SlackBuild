@@ -77,8 +77,10 @@ rmdir data/voices/evgeniy-eng
 rmdir data/voices/evgeniy-rus
 rmdir data/voices/victoria
 
-/usr/bin/scons DESTDIR=$PKG prefix=/usr sysconfdir=/etc libdir=/usr/lib${LIBDIRSUFFIX} CCFLAGS="$SLKCFLAGS" --jobs=4
-/usr/bin/scons DESTDIR=$PKG prefix=/usr sysconfdir=/etc libdir=/usr/lib${LIBDIRSUFFIX} CCFLAGS="$SLKCFLAGS" CPPFLAGS="$SLKCFLAGS" --jobs=4 install
+/usr/bin/scons DESTDIR=$PKG prefix=/usr sysconfdir=/etc \
+               libdir=/usr/lib${LIBDIRSUFFIX} CCFLAGS="$SLKCFLAGS" CPPFLAGS="$SLKCFLAGS" --jobs=4
+/usr/bin/scons DESTDIR=$PKG prefix=/usr sysconfdir=/etc \
+               libdir=/usr/lib${LIBDIRSUFFIX} CCFLAGS="$SLKCFLAGS" CPPFLAGS="$SLKCFLAGS" --jobs=4 install
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
