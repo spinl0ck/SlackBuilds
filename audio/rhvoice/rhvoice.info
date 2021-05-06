@@ -1,0 +1,8 @@
+PRGNAM="RHVoice"
+VERSION="1.2.4"
+HOMEPAGE="https://github.com/RHVoice/RHVoice"
+DOWNLOAD="https://github.com/RHVoice/RHVoice/archive/refs/tags/1.2.4.tar.gz"
+SHA256SUM="09114e8abea5646f5767ce87ca7d1f7868661b78467799775181d531d4d7514a"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

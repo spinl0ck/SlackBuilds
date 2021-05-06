@@ -1,0 +1,5 @@
+RHVoice is a free and open source speech synthesizer.
+
+RHVoice uses statistical parametric synthesis. It relies
+on existing open source speech technologies (mainly HTS
+and related software).
