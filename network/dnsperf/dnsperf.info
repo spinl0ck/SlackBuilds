@@ -1,0 +1,8 @@
+PRGNAM="dnsperf"
+VERSION="2.5.2"
+HOMEPAGE="https://www.dns-oarc.net/tools/dnsperf"
+DOWNLOAD="https://www.dns-oarc.net/files/dnsperf/dnsperf-2.5.2.tar.gz"
+SHA256SUM="0c3b7b51521a7fbd1ac54d73cf883f048197343ea1bb7b3eaf244952284ac0cf"
+REQUIRES="bind, ldns, libck"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
