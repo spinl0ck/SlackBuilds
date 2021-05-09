@@ -1,0 +1,8 @@
+PRGNAM="libck"
+VERSION="0.7.0"
+HOMEPAGE="http://concurrencykit.org"
+DOWNLOAD="https://github.com/concurrencykit/ck/archive/refs/tags/0.7.0.tar.gz"
+SHA256SUM="e730cb448fb0ecf9d19bf4c7efe9efc3c04dd9127311d87d8f91484742b0da24"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
