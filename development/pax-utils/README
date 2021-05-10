@@ -1,0 +1,12 @@
+A suite of ELF tools to aid auditing systems. Contains various ELF related
+utils for ELF32, ELF64 binaries useful for displaying PaX and security info
+on a large groups of binary files.
+
+Tools:
+  dumpelf - dump internal ELF structure
+  lddtree - display ELF dependencies as a tree
+  pspax - list ELF/PaX information about running processes
+  scanelf - user-space utility to scan ELF files
+  scanmacho - user-space utility to scan Mach-O files
+  symtree - display libraries that satisfy undefined symbols, as a tree
+
