@@ -1,3 +1,3 @@
 ## My collections Slackware current slackbuilds
 
-#### All this build scripts testing only on Slackware64-current and it builds with SBo tags.
+#### All of these build scripts have been tested only on Slackware64-current and its are building with SBo tags.
