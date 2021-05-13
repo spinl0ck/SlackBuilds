@@ -2,7 +2,7 @@
 
 # Slackware build script for perf
 
-# Copyright 2019, Dmitry Iskhakov <spinl0ck@protonmail.com>
+# Copyright 2019-2021, Dmitry (spinl0ck) Iskhakov, Russia
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -63,28 +63,36 @@ rm -rf $PKG $BUILDDIR
 mkdir -p $TMP $PKG $BUILDDIR $OUTPUT
 
 cd $SRCDIR
-make \
-  CFLAGS="$SLKCFLAGS -Wno-return-local-addr -fcommon -Wno-error=stringop-truncation" \
-  O=$BUILDDIR \
-  DESTDIR=$PKG/ \
-  prefix=/usr \
-  install
+sed -i "s|share/man|man|g" Documentation/Makefile
+sed -i "s|share/man|man|g" Makefile.config
 
-# Fixup paths (sysconfdir= and mandir= don't work)
-mv $PKG/usr/share/man $PKG/usr/man
-rmdir --ignore-fail-on-non-empty $PKG/usr/share
+make -j8 \
+  EXTRA_CFLAGS="$SLKCFLAGS" \
+  O=$BUILDDIR \
+  LIBDIR=/usr/libexec/perf-core \
+  prefix=/usr \
+  lib=lib${LIBDIRSUFFIX} \
+  mandir=/usr/man \
+  tipdir=doc/$PRGNAM-$VERSION \
+  plugindir=/usr/lib${LIBDIRSUFFIX}/perf/plugins \
+  -f Makefile.perf install DESTDIR=$PKG
+
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 find $PKG/usr/man -type f -exec gzip -9 {} \;
-for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
+for manpage in $(find $PKG/usr/man -type l); do
+    ln -s $(readlink $manpage).gz $manpage.gz
+    rm $manpage
+done
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a command-list.txt design.txt \
-    CREDITS ../../COPYING $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a Documentation/*.txt $DOCDIR/Documentation
-cat $CWD/$PRGNAM.SlackBuild > $DOCDIR/$PRGNAM.SlackBuild
+cp -a command-list.txt design.txt CREDITS ../../COPYING $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a Documentation/*.txt $PKG/usr/doc/$PRGNAM-$VERSION
+cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
+
+rm -rf $PKG/usr/lib
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
