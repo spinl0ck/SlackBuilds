@@ -1,0 +1,8 @@
+PRGNAM="dav1d"
+VERSION="0.9.0"
+HOMEPAGE="https://code.videolan.org/videolan/dav1d"
+DOWNLOAD="http://downloads.videolan.org/pub/videolan/dav1d/0.9.0/dav1d-0.9.0.tar.xz"
+SHA256SUM="cfae88e8067c9b2e5b96d95a7a00155c353376fe9b992a96b4336e0eab19f9f6"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"

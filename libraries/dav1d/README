@@ -1,0 +1,4 @@
+dav1d is a new open-source AV1 decoder developed by the VideoLAN and FFmpeg
+communities and sponsored by the Alliance for Open Media.
+
+For ffmpeg support, you need to rebuild ffmpeg with option --enable-libdav1d.
