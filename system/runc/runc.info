@@ -1,0 +1,8 @@
+PRGNAM="runc"
+VERSION="1.0.0_rc95"
+HOMEPAGE="https://github.com/opencontainers/runc"
+DOWNLOAD="https://github.com/opencontainers/runc/archive/v1.0.0-rc95/runc-1.0.0-rc95.tar.gz"
+SHA256SUM="02dac7f1a0dcfe55dd9820df787adedf030060870354915e7bba86f8487ce93c"
+REQUIRES="google-go-lang, go-md2man, libseccomp"
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
