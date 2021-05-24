@@ -1,0 +1,5 @@
+SVT HEVC encoder. Scalable Video Technology (SVT) is a software-based video
+coding technology that is highly optimized for Intel® Xeon® processors. Using
+the open source SVT-HEVC encoder, it is possible to spread video encoding
+processing across multiple Intel® Xeon® processors to achieve a real advantage
+of processing efficiency. 

@@ -1,0 +1,8 @@
+PRGNAM="svt-hevc"
+VERSION="1.5.1"
+HOMEPAGE="https://github.com/OpenVisualCloud/SVT-HEVC"
+DOWNLOAD="https://github.com/OpenVisualCloud/SVT-HEVC/archive/refs/tags/v1.5.1.tar.gz"
+SHA256SUM="bb91cbb5048fdc142591ad4fb9fc93ac5e865a7061e3bc56ea70f198079dae55"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
