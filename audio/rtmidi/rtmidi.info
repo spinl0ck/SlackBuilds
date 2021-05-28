@@ -1,0 +1,8 @@
+PRGNAM="rtmidi"
+VERSION="4.0.0"
+HOMEPAGE="https://www.music.mcgill.ca/~gary/rtmidi"
+DOWNLOAD="http://www.music.mcgill.ca/~gary/rtmidi/release/rtmidi-4.0.0.tar.gz"
+SHA256SUM="370cfe710f43fbeba8d2b8c8bc310f314338c519c2cf2865e2d2737b251526cd"
+REQUIRES=""
+MAINTAINER="Dmitry (spinl0ck) Iskhakov"
+EMAIL="spinl0ck[at]protonmail.com"
