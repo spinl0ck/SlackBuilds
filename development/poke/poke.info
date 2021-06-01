@@ -1,8 +1,0 @@
-PRGNAM="poke"
-VERSION="1.0"
-HOMEPAGE="http://jemarch.net/poke"
-DOWNLOAD="https://ftp.gnu.org/gnu/poke/poke-1.0.tar.gz"
-SHA256SUM="de930b8700c0772b3c2cd0d0ca35f50fd3d77bdf82c6251eb516b49e8ca25b0a"
-REQUIRES="boehm-gc"
-MAINTAINER="Dmitry (spinl0ck) Iskhakov"
-EMAIL="spinl0ck[at]protonmail.com"
