@@ -23,7 +23,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=getdns
-VERSION=${VERSION:-1.6.0}
+VERSION=${VERSION:-1.7.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -100,6 +100,10 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | gr
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 find $PKG/usr/man -type f -exec gzip -9 {} \;
+for manpage in $(find $PKG/usr/man -type l); do
+    ln -s $(readlink $manpage).gz $manpage.gz
+    rm $manpage
+done
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a README.md LICENSE $PKG/usr/doc/$PRGNAM-$VERSION
